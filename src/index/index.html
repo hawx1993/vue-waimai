@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no"/>
+  <meta name="spider-id">
+  <title>美团外卖</title>
+</head>
+<body>
+
+<div id="main">
+  <router-view>
+
+  </router-view>
+</div>
+
+<script>
+  var screenWidth = document.body.scrollWidth;
+  var screenHeight = 150;
+  if(screenWidth === 320){
+    screenHeight = 120;
+  }else if(screenWidth >= 640){
+    screenWidth = 640;
+    screenHeight = 250;
+  }
+</script>
+<script src="${@assert}${@version}/index/index.js"></script>
+</body>
+</html>
