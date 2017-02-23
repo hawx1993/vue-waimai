@@ -1,0 +1,375 @@
+{
+    "code": 0,
+    "data": {
+        "commentLabels": [
+            {
+                "ID": 0,
+                "content": "全部(1311)",
+                "isSelected": 1,
+                "type": 1
+            },
+            {
+                "ID": 1,
+                "content": "好评(1246)",
+                "isSelected": 0,
+                "type": 1
+            },
+            {
+                "ID": 2,
+                "content": "中评(55)",
+                "isSelected": 0,
+                "type": 1
+            },
+            {
+                "ID": 3,
+                "content": "差评(10)",
+                "isSelected": 0,
+                "type": 1
+            },
+            {
+                "ID": 4,
+                "content": "追评(2)",
+                "isSelected": 0,
+                "type": 1
+            },
+            {
+                "ID": 5,
+                "content": "有图评价(10)",
+                "isSelected": 0,
+                "type": 1
+            },
+            {
+                "ID": 3403,
+                "content": "味道赞(185)",
+                "isSelected": 0,
+                "type": 2
+            },
+            {
+                "ID": 8015,
+                "content": "食材新鲜(131)",
+                "isSelected": 0,
+                "type": 2
+            },
+            {
+                "ID": 101,
+                "content": "送货快(293)",
+                "isSelected": 0,
+                "type": 2
+            },
+            {
+                "ID": 9008,
+                "content": "骑手服务好(238)",
+                "isSelected": 0,
+                "type": 2
+            },
+            {
+                "ID": 3114,
+                "content": "口味一般(17)",
+                "isSelected": 0,
+                "type": 2
+            },
+            {
+                "ID": 2,
+                "content": "配送慢(6)",
+                "isSelected": 0,
+                "type": 2
+            }
+        ],
+        "deliveryScore": 5,
+        "dpCommentNum": 0,
+        "end": false,
+        "integratedScore": 4.7,
+        "list": [
+            {
+                "commentTime": "2017-02-22",
+                "content": "餐品没给到骑手就拒绝退单了 ",
+                "deliveryTime": "20分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": null,
+                "userName": "sfy622212128",
+                "userPicUrl": "https://img.meituan.net/avatar/436becbf263c6bc93534b85cc5bab7ee43018.jpg"
+            },
+            {
+                "commentTime": "2017-02-17",
+                "content": "所有都错，点了全麦面包，给我了不新鲜的白的。肉加错了，蔬菜加错了，酱加错了。都非常非常差做了。",
+                "deliveryTime": "34分钟送达",
+                "label": "",
+                "pictures": [
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/083c1eddf0af75793f208ca8d18c339641353.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/083c1eddf0af75793f208ca8d18c339641353.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/083c1eddf0af75793f208ca8d18c339641353.jpg@160w_160h_1e_1c"
+                    }
+                ],
+                "praiseDish": "罐装零度可乐,单色巧克力甜饼",
+                "score": 3,
+                "shopReply": null,
+                "userName": "JxS879295044",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2017-02-13",
+                "content": "金枪鱼沙拉 金枪鱼比平时少很多",
+                "deliveryTime": "41分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "火鸡胸,面包选择,提子甜饼,西南酱,番茄酱,意大利香肠三明治6寸,金枪鱼沙拉,蜜汁芥末酱,罐装可乐",
+                "score": 4,
+                "shopReply": null,
+                "userName": "rong09199",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2017-02-11",
+                "content": "感觉不是先做的。。百味卷的面皮很硬。。\n和我以前门面店里吃的不太一样。。奶茶还可以",
+                "deliveryTime": "33分钟送达",
+                "label": "口味一般,准时送达",
+                "pictures": null,
+                "praiseDish": "奶茶",
+                "score": 4,
+                "shopReply": null,
+                "userName": "ksn372607291",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2017-01-22",
+                "content": "点了汤但是送来没有汤",
+                "deliveryTime": "42分钟送达",
+                "label": "送货快",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": null,
+                "userName": "XNG404174441",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2017-01-20",
+                "content": "里边的芝士呢？也不加热就直接送。真服了。",
+                "deliveryTime": "59分钟送达",
+                "label": "偷工减料",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 2,
+                "shopReply": "商家回复(当天):您好，非常抱歉我们的服务不能令您满意！我们默认蔬菜是不加热的，加上气候寒冷，餐品在配送过程中无法完全保温，但请您放心面包芝士和肉类（除冷餐金枪鱼）我们一定会做到快速烤箱加热后出餐！另外，建议您尽可能保留明显的餐品缺失照片，以便我们对您进行赔偿并改进我们的服务，谢谢您的支持！",
+                "userName": "团没啊",
+                "userPicUrl": "https://img.meituan.net/avatar/76b4175a979bf97c930f74f85ec6592419492.jpeg"
+            },
+            {
+                "commentTime": "2017-01-17",
+                "content": "东西很不错赞一个",
+                "deliveryTime": "35分钟送达",
+                "label": "味道赞,食材新鲜,轻食主义,整洁卫生,送货快,准时送达,骑手服务好",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 5,
+                "shopReply": "商家回复(4天后):非常感谢您的好评，祝您新年好心情！",
+                "userName": "UxM646488289",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2017-01-05",
+                "content": "备注中写明了不要任何酱，也写明了加的肉换成火鸡胸肉，结果又是酱又是火腿肉的 根本就吃不了！",
+                "deliveryTime": "50分钟送达",
+                "label": "",
+                "pictures": [
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/ceb9388311f2f81d5c382ec2535d6ef5259551.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/ceb9388311f2f81d5c382ec2535d6ef5259551.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/ceb9388311f2f81d5c382ec2535d6ef5259551.jpg@160w_160h_1e_1c"
+                    },
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/d0c1a363a16435d5d96fc665ade0fbf0256657.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/d0c1a363a16435d5d96fc665ade0fbf0256657.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/d0c1a363a16435d5d96fc665ade0fbf0256657.jpg@160w_160h_1e_1c"
+                    }
+                ],
+                "praiseDish": "",
+                "score": 3,
+                "shopReply": "商家回复(15天后):非常抱歉，就餐高峰我们的工作有疏漏，感谢您的意见和监督，我们会努力改进！",
+                "userName": "Ben鹏",
+                "userPicUrl": "https://img.meituan.net/avatar/5315e17603111451d1ee742ef13ec440103880.jpg"
+            },
+            {
+                "commentTime": "2017-01-03",
+                "content": "食物加错料 给错饮料",
+                "deliveryTime": "47分钟送达",
+                "label": "准时送达",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(18天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "ciG629812798",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2016-12-29",
+                "content": "這點肉啥意思？以為我沒吃過subway嗎？而且芝士去哪了？",
+                "deliveryTime": "23分钟送达",
+                "label": "偷工减料",
+                "pictures": [
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/025f8d53698cc2ce79093345e0499347404998.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/025f8d53698cc2ce79093345e0499347404998.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/025f8d53698cc2ce79093345e0499347404998.jpg@160w_160h_1e_1c"
+                    },
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/496b9feef6897c293e83ca684747252a406247.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/496b9feef6897c293e83ca684747252a406247.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/496b9feef6897c293e83ca684747252a406247.jpg@160w_160h_1e_1c"
+                    }
+                ],
+                "praiseDish": "",
+                "score": 3,
+                "shopReply": "商家回复(344天后):您好，非常抱歉我们的服务没有令您满意！奇士牛排默认2份量勺，细条状确实没有意大利香肠或者片装的火腿等有肉感，我们非常欢迎您亲临门店鉴定指导！感谢您的意见！",
+                "userName": "KKk547160761",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2016-12-27",
+                "content": "请问酸黄瓜和酸辣椒是这么绿的么？没有的话可以打电话问一下啊，新鲜的辣椒真的不喜欢吃，都是青草味。",
+                "deliveryTime": "23分钟送达",
+                "label": "商家不看备注",
+                "pictures": [
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/430b4c5d85f0bd82cca08e22b7dcb14e443068.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/430b4c5d85f0bd82cca08e22b7dcb14e443068.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/430b4c5d85f0bd82cca08e22b7dcb14e443068.jpg@160w_160h_1e_1c"
+                    }
+                ],
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(341天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "wtmim",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2016-12-26",
+                "content": "一般 是这单能给的最高评价，送来的，冷，料都掉出来了…不知道送的问题还是做的就酱紫",
+                "deliveryTime": "41分钟送达",
+                "label": "保温不到位,包装简陋",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 3,
+                "shopReply": "商家回复(340天后):非常抱歉给您用餐带来不便！冬季外卖配送保温隔热问题，我们一直在努力克服中！感谢您的意见！",
+                "userName": "yumiloo",
+                "userPicUrl": "https://img.meituan.net/avatar/ffa10f993d5361e6afb6b40440425c70141343.jpg"
+            },
+            {
+                "commentTime": "2016-12-26",
+                "content": "巧克力全是水这么小一杯还要十块  还有要的奶酪面包为什么送来是小麦的",
+                "deliveryTime": "1小时57分钟送达",
+                "label": "",
+                "pictures": [
+                    {
+                        "bigPicUrl": "https://p0.meituan.net/wmcomment/edea90bc96091d936fdea3252667fcaf37829.jpg@330w_330h_1e_1c",
+                        "originalPicUrl": "https://p0.meituan.net/wmcomment/edea90bc96091d936fdea3252667fcaf37829.jpg",
+                        "smallPicUrl": "https://p0.meituan.net/wmcomment/edea90bc96091d936fdea3252667fcaf37829.jpg@160w_160h_1e_1c"
+                    }
+                ],
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(340天后):您好，感谢您的意见！商品缺货我们尽可能会提前与顾客沟通，感谢您的提醒！",
+                "userName": "RQE776159147",
+                "userPicUrl": "https://img.meituan.net/avatar/190f896095fa0aeb2f1ca688b745c5c430494.jpg"
+            },
+            {
+                "commentTime": "2016-12-22",
+                "content": "肉很少，蓝瘦，香菇，没有橄榄",
+                "deliveryTime": "38分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 3,
+                "shopReply": "商家回复(336天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "lyshuobuzhun",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2016-12-22",
+                "content": "肉都没有切开、一大片一大片的，橄榄 酸黄瓜等等配料都没有……",
+                "deliveryTime": "19分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(336天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "zaI893009733",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2016-12-20",
+                "content": "少送，打了两次电话口头上说是会处理，最后不了了之，欺骗消费者，无诚意商家。",
+                "deliveryTime": "29分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 3,
+                "shopReply": "商家回复(334天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！如果因为我们的工作疏忽再次为您带来不便，还烦请您不厌其烦地催促我们！谢谢您的支持！",
+                "userName": "南无圣光",
+                "userPicUrl": "https://img.meituan.net/avatar/cd90fa4f4f9afeac1fba7a33c069c9e537922.jpg"
+            },
+            {
+                "commentTime": "2016-12-20",
+                "content": "点的培根双份肉呢！吃完了也没发现",
+                "deliveryTime": "21分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(334天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "LsQ519708776",
+                "userPicUrl": ""
+            },
+            {
+                "commentTime": "2016-12-18",
+                "content": "买了几次，真是越来越气，纸巾也没有送了，卷还特别少了",
+                "deliveryTime": "33分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 3,
+                "shopReply": "商家回复(332天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "一只金牛女",
+                "userPicUrl": "https://img.meituan.net/avatar/d92f120c72bacee53b0a51b6b2e3672467176.jpg"
+            },
+            {
+                "commentTime": "2016-12-18",
+                "content": "没有加热，大冬天冰冰冷没法吃啊……",
+                "deliveryTime": "29分钟送达",
+                "label": "",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(332天后):非常抱歉，金枪鱼我们一直保留传统地冷餐供应，其他肉类都会经过快速烤箱加热后出餐，至于冬天保温的问题，我们正在努力克服中！感谢您的意见！",
+                "userName": "Betty2211",
+                "userPicUrl": "https://img.meituan.net/avatar/da07b1058b63f17b793086d5be2fda3b116003.jpg"
+            },
+            {
+                "commentTime": "2016-11-28",
+                "content": "特别备注每样菜多来点，结果只吃到了生菜，西红柿，黄瓜，再无其它。过分吧，酸黄瓜呢，橄榄呢，洋葱呢，酸椒呢",
+                "deliveryTime": "15分钟送达",
+                "label": "送货快",
+                "pictures": null,
+                "praiseDish": "",
+                "score": 4,
+                "shopReply": "商家回复(312天后):非常抱歉，建议您尽可能保留餐品缺失图片，并联系我们为您提供满意的处理方案！谢谢！",
+                "userName": "TfL989293340",
+                "userPicUrl": ""
+            }
+        ],
+        "nextStartIndex": 20,
+        "praiseRatio": "商家好评率95%",
+        "recordCount": 1311,
+        "shopId": 7329865,
+        "shopScore": 4.5,
+        "startIndex": 0
+    },
+    "errordata": null,
+    "msg": null,
+    "reminds": null,
+    "subcode": 0
+}

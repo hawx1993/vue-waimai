@@ -1,15 +1,23 @@
 import Vue from 'vue'
-import Router from 'vue-router'
-import detail from 'components/vue/detail'
+import VueRouter from 'vue-router'
+import menu from 'components/vue/menu'
+import estimate from 'components/vue/estimate'
+import merchants from 'components/vue/merchants'
 
-Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'detail',
-      component: detail
-    }
-  ]
-})
+Vue.use(VueRouter);
+
+const routes = [
+    { path: '/', component: menu   },
+    { path: '/menu', component: menu },
+    { path: '/estimate', component: estimate },
+    { path: '/merchants', component: merchants }
+];
+const router = new VueRouter({
+    linkActiveClass: 'active',
+    routes
+});
+
+export default router;
+
+

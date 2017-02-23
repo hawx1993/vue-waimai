@@ -1,5 +1,5 @@
 <template>
-    <header class="hd-wrapper">
+    <div class="hd-wrapper">
         <div class="shop-header">
             <img :src="shop.shopPic" alt="">
             <div class="shop-item">
@@ -11,14 +11,11 @@
                 <p class="delivery-msg">{{ shop.deliveryMsg }}</p>
             </div>
         </div>
-    </header>
-
+    </div>
 </template>
 <style lang="less" rel="stylesheet/less">
     @import "../less/common.less";
-
-    header{
-        position: fixed;
+    .hd-wrapper{
         background: #91618e;
         background: url(//www.dpfile.com/mod/app-m-waimai-mainchannelnew/1.1.14/css/img/header.png);
         padding: 1em 0;
@@ -76,18 +73,16 @@
     }
 </style>
 <script>
-    import axios from 'axios'
-
     export default{
-        data(){
-            return{
-                shop: {}
+        props: {
+            shop: {
+                type: Object
             }
         },
-        created(){
-            axios.get('static/data.json').then((res)=>{
-                this.shop = res.data.data.shopInfo;
-            })
+        data(){
+            return{
+
+            }
         },
         components:{
 

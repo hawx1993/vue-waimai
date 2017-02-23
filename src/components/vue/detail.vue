@@ -1,28 +1,24 @@
-<template lang="html">
-    <div class="m-container">
-        <v-header></v-header>
-
+<template>
+    <div>
+        <v-menu></v-menu>
+        <v-goods></v-goods>
     </div>
 </template>
-<style lang="less" rel="stylesheet/less">
-    @import "../less/common.less";
-    .m-container{
+<style  lang="less" rel="stylesheet/less">
 
-    }
 </style>
 <script>
-    import '../../lib/flexible';
-    import header from 'components/vue/header'
-    import axios from 'axios'
+    import menu from 'components/vue/menu.vue'
+    import goods from 'components/vue/goods.vue'
     export default{
         data(){
-            return {
-                msg: 'hello vue'
+            return{
+                msg:'hello vue'
             }
         },
-
-        components: {
-            'v-header': header
+        components:{
+            'v-menu': menu,
+            'v-goods': goods,
         }
     }
 </script>

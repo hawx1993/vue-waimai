@@ -1,0 +1,37 @@
+{
+    "code": 200,
+    "data": {
+        "licencePics": [
+            "https://p0.meituan.net/xianfu/bbcee1730384f6dddc5b7b7f00dfdcd9101586.jpg@300w_200h_1e_1c",
+            "https://p0.meituan.net/xianfu/32b48c9f7cc1909bdd8bba6b25769d1a197682.jpg@300w_200h_1e_1c"
+        ],
+        "invoiceMsg": "支持开发票，开票金额50元起。请在下单时填好开票抬头。",
+        "shopReviewUrl": "https://m.dianping.com/shop/7329865/review_all?msource=qianbaowaimai",
+        "activityList": [],
+        "isBrand": 1,
+        "brandMsg": "该商户为品牌商户",
+        "tip": "SUBWAY黄龙时代广场店：0571－81902187，感谢您的光顾！春节歇业时间安排：1月27日14：00至2月3日。本店将于2月4日（农历正月初八）恢复营业并恢复外卖配送！预祝大家新年快乐！",
+        "close": "2",
+        "dpShopId": 7329865,
+        "shopAddress": "万塘路6-2号",
+        "shopStar": 47,
+        "serTime": [
+            "10:00-21:00"
+        ],
+        "shopReviewTitle": "到店点评",
+        "shopName": "赛百味（黄龙时代广场店）",
+        "invoiceSupport": 1,
+        "mtWmPoiId": 943173,
+        "shopPhone": [
+            "057181902187"
+        ],
+        "shopEnvUrl": "https://m.dianping.com/shop/7329865/photos/tag-%E7%8E%AF%E5%A2%83",
+        "overtimePaymentSupported": false,
+        "onlinePay": 1,
+        "shopEnvTitle": "商家环境",
+        "sold": "月售194"
+    },
+    "mtWmPoiId": 943173,
+    "orderId": null,
+    "orderPlatform": 0
+}
