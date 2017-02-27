@@ -58,5 +58,4 @@
             background-position: 40% 96.226%;
         }
     }
-
 </style>

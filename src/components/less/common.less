@@ -1,5 +1,9 @@
 @rem : 36rem;
-
+html,body{
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 12/@rem;
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,4 +15,19 @@ ul{
     li{
         list-style: none;
     }
+}
+.webkit-box{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.center-box{
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }

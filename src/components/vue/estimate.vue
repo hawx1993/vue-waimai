@@ -23,67 +23,46 @@
                 </li>
             </ul>
         </div>
+        <div class="m-cmtType">
+            <span v-for="item in cmt.commentLabels">{{ item.content }}</span>
+        </div>
+        <ul class="evaluate-wrap">
+            <li  v-for="item in list" class="evaluate-list">
+                <div class="content">
+                    <div class="evaluate-left">
+                        <img :src="item.userPicUrl || defaultUserPic" alt="">
+                    </div>
+                    <div class="evaluate-right">
+                        <p class="evaluate-sub">
+                            <span class="name">{{ item.userName || '美团外卖用户' }}</span>
+                            <span class="time">{{ item.commentTime }}</span>
+                        </p>
+                        <p class="evaluate-star">
+                            <star :score="item.score"></star>
+                            <span class="ship-time">{{ item.deliveryTime }}</span>
+                        </p>
+                        <p class="evaluate-comment">
+                            {{ item.content }}
+                        </p>
+                        <div class="evaluate-pic" v-if="item.pictures" >
+                            <img :src="pic.smallPicUrl" v-for="pic in item.pictures" alt="">
+                        </div>
+                        <p class="evaluate-label">
+                            <i class="label" v-if="item.label"></i>
+                            {{ item.label }}
+                        </p>
+                        <p class="add-comment" v-if="item.shopReply">
+                            {{ item.shopReply }}
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
-
 </template>
 <style lang="less" rel="stylesheet/less">
     @import "../less/common.less";
-    .comment-wrap{
-        background-color: #f0f0f0 !important;
-        color: #333;
-        font-size: 12/@rem;
-        z-index: 11111;
-        .m-comment{
-            display: -webkit-box;
-            width: 100%;
-            margin: 10/@rem 0;
-            background-color: #fff;
-            .info-left{
-                margin: 15/@rem 0 15/@rem;
-                text-align: center;
-                width: 40%;
-                border-right: 1/@rem solid #d8d8d8;
-                .info-score{
-                    line-height: 32/@rem;
-                    font-size: 35/@rem;
-                    color: #FEC520;
-                }
-                .info-desc{
-                    line-height: 21/@rem;
-                    font-size: 14/@rem;
-                    color: #656565;
-                }
-                .info-good{
-                    color: #A9A9A9;
-                    font-size: 11/@rem;
-                    line-height: 15/@rem;
-                }
-            }
-            .info-right{
-                margin: 15/@rem 0 15/@rem;
-                text-align: center;
-                width: 60%;
-                .info-star{
-                    margin-bottom: 18/@rem;
-                    margin-top: 5/@rem;
-                    p{
-                        display: inline-block;
-                        height: 12/@rem;
-                        margin: 5/@rem 5/@rem 0 10/@rem;
-                        .delivery-star{
-                            background: url("//www.dpfile.com/mod/app-m-waimai-mainchannelnew/1.1.14/css/img/evaluatestars.png") 40% 5.66% no-repeat;
-                            width: 12/@rem;
-                            height: 12/@rem;
-                            float: left;
-                            margin-right: 1/@rem;
-                            background-size: 126% 379%;
-                        }
-                    }
-
-                }
-            }
-        }
-    }
+    @import "../less/estimate.less";
 </style>
 <script>
     import star from './star';
@@ -91,22 +70,17 @@
     import axios from 'axios';
 
     export default{
-        props: {
-            shop: {
-                type: Object
-            },
-            dishCategory: {
-                type: Array
-            }
-        },
         data(){
             return{
-                cmt:{}
+                cmt:{},
+                list:[],
+                defaultUserPic: 'http://xs01.meituan.net/waimai_i/img/friend/userpic_defalut.c741e924.png'
             }
         },
         created(){
             axios.get('static/shopComment.json').then((res)=>{
                 this.cmt = res.data.data;
+                this.list = res.data.data.list;
             })
         },
         components:{

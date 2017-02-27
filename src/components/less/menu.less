@@ -1,0 +1,150 @@
+.m-menu{
+    position: absolute;
+    .webkit-box;
+    top: 118/@rem;
+    bottom: 50/@rem;
+    width: 100%;
+    overflow: hidden;
+    .menu-wrap{
+        -webkit-box-flex: 0;
+        width: 23%;
+        background: #f8f8f8;
+        .menu-list{
+            .menu-item{
+                position: relative;
+                overflow: hidden;
+                display: block;
+                color: #666;
+                border-bottom: 1/@rem solid #f3f0f0;
+                border-right: 1/@rem solid #f3f0f0;
+                font-size: 12/@rem;
+                line-height: 16/@rem;
+                padding: 12/@rem 0/@rem 12/@rem 10/@rem;
+                background-color: #fafafa;
+            }
+            .menu-item.current{
+                position: relative;
+                color: #666;
+                background-color: #fff;
+                border-right: 1px solid #f4f4f4;
+                padding-left: 10/@rem;
+            }
+            .menu-item.current::before{
+                position: absolute;
+                content: '';
+                top: 25%;
+                left: 0;
+                height: 50%;
+                border-left: solid #ffd161 3/@rem;
+            }
+        }
+    }
+    .foods-wrap{
+        width: 77%;
+        .foods-list{
+            background-color: #fff;
+            .title{
+                text-align: left;
+                padding: 5/@rem 0;
+                text-indent: 10/@rem;
+                font-size: 12/@rem;
+                line-height: 1;
+                color: #666;
+                background-color: #f8f8f8;
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+                z-index: 10;
+            }
+            ul{
+                .food-item{
+                    position: relative;
+                    color: #323232;
+                    padding: 12/@rem 0 0 10/@rem;
+                    border-bottom: 1/@rem solid #f3f0f0;
+                    line-height: 35/@rem;
+                    .dish-basic{
+                        position: relative;
+                        .webkit-box;
+                        -webkit-box-orient: horizontal;
+                        -webkit-flex-direction: row;
+                        flex-direction: row;
+                        padding: 0 10/@rem 14/@rem 0;
+                        .img{
+                            height: 60/@rem;
+                            width: 60/@rem;
+                            border-radius: 4/@rem;
+                            border: 1/@rem solid #f3f0f0;
+                            -webkit-flex-shrink: 0;
+                            flex-shrink: 0;
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                background-size: 100%;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                            }
+                        }
+                        .content{
+                            padding-left: 5/@rem;
+                            -webkit-box-flex: 1;
+                            -webkit-flex: 1 1;
+                            -ms-flex: 1 1;
+                            flex: 1 1;
+                            min-width: 0;
+                            .name{
+                                font-size: 16/@rem;
+                                line-height: 22/@rem;
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                color: #444;
+                            }
+                            .description{
+                                padding-top: 2/@rem;
+                                padding-bottom: 2/@rem;
+                                font-size: 12/@rem;
+                                color: #999;
+                                line-height: 16/@rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .extra{
+                                padding-top: 1/@rem;
+                                font-size: 12/@rem;
+                                color: #999;
+                                line-height: 16/@rem;
+                                .count{
+                                    margin-right: 15/@rem;
+                                }
+                            }
+                            .deal{
+                                .webkit-box;
+                                .center-box;
+                                line-height: 1.5em;
+                                .price{
+                                    color: #fb4e44;
+                                    font-size: 18/@rem;
+                                }
+                                .dish-oper{
+                                    .webkit-box;
+                                    .center-box;
+                                    .icon-plus{
+                                        background: url("./../../assets/plus.png") no-repeat;
+                                        background-size: 25/@rem 25/@rem;
+                                        width: 25/@rem;
+                                        height: 25/@rem;
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

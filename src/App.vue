@@ -57,7 +57,7 @@
           </div>
       </div>
       <keep-alive>
-          <router-view :shop="shop" :dishCategory="dishCategory"></router-view>
+          <router-view></router-view>
       </keep-alive>
   </div>
 </template>
@@ -71,15 +71,13 @@
         name: 'app',
         data(){
             return {
-                shop: {},
-                dishCategory: []
+                shop: {}
             }
         },
         created(){
             axios.get('static/goodsData.json').then((res)=>{
                 var shopData = res.data.data;
                 this.shop = shopData.shopInfo;
-                this.dishCategory = shopData.dishCategory;
             })
         },
         components: {

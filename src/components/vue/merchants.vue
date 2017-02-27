@@ -46,9 +46,7 @@
         margin-right: 10/@rem;
     }
     .shop-wrap{
-        background-color: #f0f0f0 !important;
-        color: #333;
-        font-size: 12/@rem;
+
         .m-shop{
             padding-top: 2/@rem;
             .shopName{
@@ -143,14 +141,6 @@
     import star from './star';
 
     export default{
-        props: {
-            shop: {
-                type: Object
-            },
-            dishCategory: {
-                type: Array
-            }
-        },
         data(){
             return{
                 shopInfo: {}
