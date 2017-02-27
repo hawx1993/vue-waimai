@@ -1,26 +1,31 @@
-# waimai
+# 基于vue2+vue-router+webpack+less+es6仿美团外卖项目
 
 > A Vue.js project
 
 ## Build Setup
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+>install dependencies
 
-# build for production with minification
-npm run build
+```
+$ yarn
+```
+>serve with hot reload at localhost:8080
 
-# build for production and view the bundle analyzer report
-npm run build --report
+```
+$ npm run dev
 ```
 
-## 结构
+>build for production with minification
 
-app.vue嵌套detail.vue，作为主页
-detail.vue嵌套menu.vue（左侧菜单）和goods.vue（右侧食品）
+```
+npm run build
+```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### TODO
+
+- 首页
+- 登陆页
+- 订单页
+- 评价页下拉刷新
+- 商品页购买功能
