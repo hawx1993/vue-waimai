@@ -27,23 +27,18 @@
                                     </div>
                                     <div class="deal">
                                         <span class="price">￥{{food.discountPrice}}</span>
-                                        <div class="dish-oper">
-                                            <i class="icon-plus"></i>
+                                        <div class="cart-wrapper">
+                                            <cartcontrol  :food="food"></cartcontrol>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-                            <!--<div class="cartcontrol-wrapper">-->
-                                <!--<cartcontrol @add="addFood" :food="food"></cartcontrol>-->
-                            <!--</div>-->
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <v-cart :shop="shop"></v-cart>
+        <cart :shop="shop"></cart>
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
@@ -55,6 +50,7 @@
     import header from 'components/vue/header'
     import axios from 'axios'
     import cart from 'components/vue/cart'
+    import cartcontrol from 'components/vue/cartcontrol'
     import BScroll from 'better-scroll';
 
     export default{
@@ -121,8 +117,8 @@
             }
         },
         components: {
-            'v-header': header,
-            'v-cart': cart
+            'cart': cart,
+            'cartcontrol': cartcontrol
         }
     }
 </script>
