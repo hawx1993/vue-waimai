@@ -21,9 +21,6 @@
         },
         methods: {
             addCart(event) {
-                if (!event._constructed) {
-                    return;
-                }
                 if (!this.food.count) {
                     Vue.set(this.food, 'count', 1);
                 } else {
@@ -32,9 +29,6 @@
                 this.$emit('add', event.target);
             },
             decreaseCart(event) {
-                if (!event._constructed) {
-                    return;
-                }
                 if (this.food.count) {
                     this.food.count--;
                 }
@@ -79,11 +73,11 @@
             color: #333;
         }
         .cart-add{
+            display: inline-block;
             background: url("./../../assets/plus.png") no-repeat;
             background-size: 25/@rem 25/@rem;
             width: 25/@rem;
             height: 25/@rem;
-            display: inline-block;
         }
     }
 </style>

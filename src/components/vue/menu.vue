@@ -3,7 +3,7 @@
         <!--左侧菜单栏-->
         <div class="menu-wrap" ref="menuWrapper">
             <ul class="menu-list">
-                <li v-for="(item,index) in dishCategory" class="menu-item" :class="{'current':currentIndex === index}" @click="selectMenu(index,$event)">{{ item.category }}</li>
+                <li v-for="(item,index) in dishCategory" class="menu-item" :class="{'current':currentIndex === index}" @click="selectMenu(index)">{{ item.category }}</li>
             </ul>
         </div>
         <!--右侧食品栏-->
@@ -28,7 +28,7 @@
                                     <div class="deal">
                                         <span class="price">￥{{food.discountPrice}}</span>
                                         <div class="cart-wrapper">
-                                            <cartcontrol  :food="food"></cartcontrol>
+                                            <cartControl  :food="food"></cartControl>
                                         </div>
                                     </div>
                                 </div>
@@ -38,7 +38,7 @@
                 </li>
             </ul>
         </div>
-        <cart :shop="shop"></cart>
+        <cart :shop='shop' :selectFoods="selectFoods"></cart>
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
@@ -57,6 +57,7 @@
         data(){
             return {
                 shop: {},
+                goods:[],
                 dishCategory: [],
                 listHeight: [],
                 scrollY: 0
@@ -73,20 +74,35 @@
                 }
                 return 0;
             },
+            selectFoods(){
+                let self = this,
+                    foods = [];
+                let dishList = self.dishCategory;
+                dishList.forEach((item)=>{
+                    var foodItem = item.dishList;
+                    foodItem.forEach((f)=>{
+                        if(f.count){
+                            foods.push(foodItem)
+                        }
+                    })
+                });
+                return foods;
+            }
         },
         created(){
+            var self = this;
             axios.get('static/goodsData.json').then((res)=>{
                 let shopData = res.data.data;
-                this.shop = shopData.shopInfo;
-                this.dishCategory = shopData.dishCategory;
-                this.$nextTick(() => {
-                    this._initScroll();
-                    this._calculateHeight();
+                self.shop = shopData.shopInfo;
+                self.dishCategory = shopData.dishCategory;
+                self.$nextTick(() => {
+                    self._initScroll();
+                    self._calculateHeight();
                 });
             })
         },
         methods: {
-            selectMenu(index, event){
+            selectMenu(index){
                 let dishList = this.$refs.dishList;
                 let $el = dishList[index];
                 this.foodsScroll.scrollToElement($el, 300);
@@ -118,7 +134,7 @@
         },
         components: {
             'cart': cart,
-            'cartcontrol': cartcontrol
+            'cartControl': cartcontrol
         }
     }
 </script>
