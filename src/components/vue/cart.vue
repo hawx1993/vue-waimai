@@ -179,24 +179,19 @@
         computed: {
             totalPrice() {
                 let total = 0;
-                this.selectFoods.forEach((food) => {
-                    food.forEach((item)=>{
-                        if(item.count && item.discountPrice ){
-                            console.log('dd');
-                            total += item.discountPrice * item.count;
-                        }
-                    })
+                this.selectFoods.forEach((item) => {
+                    if(item.count && item.discountPrice){
+                        total += item.discountPrice * item.count;
+                    }
                 });
                 return total;
             },
             totalCount() {
                 let count = 0;
-                this.selectFoods.forEach((food) => {
-                    food.forEach((item)=>{
-                        if(item.count){
-                            count += item.count;
-                        }
-                    })
+                this.selectFoods.forEach((item) => {
+                    if(item.count){
+                        count += item.count;
+                    }
                 });
                 return count;
             },

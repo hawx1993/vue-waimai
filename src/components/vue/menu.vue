@@ -80,9 +80,9 @@
                 let dishList = self.dishCategory;
                 dishList.forEach((item)=>{
                     var foodItem = item.dishList;
-                    foodItem.forEach((f)=>{
-                        if(f.count){
-                            foods.push(foodItem)
+                    foodItem.forEach((food)=>{
+                        if(food.count){
+                            foods.push(food);
                         }
                     })
                 });
