@@ -13,7 +13,6 @@
     .center-box;
 }
 .common-cart{
-    background-size: 50/@rem auto;
     width: 50/@rem;
     height: 50/@rem;
 }
@@ -50,6 +49,7 @@
     .common-footer;
     .box{
         .cart-icon{
+            display: inline-block;
             .common-cart;
             position: absolute;
             left: 10/@rem;
@@ -108,9 +108,14 @@
 }
 .cart-panel-detail{
     position: fixed;
-    bottom: 50px;
+    bottom: 50/@rem;
     width: 100%;
+    left: 0;
     &::before{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
         content: '';
         background: rgba(0,0,0,.6);
         display: block;
@@ -120,7 +125,9 @@
     .shopcart-container{
         position: fixed;
         bottom: 50/@rem;
+        left: 0;
         width: 100%;
+        z-index: 99999;
         .cart-head{
             background-color: #f4f4f4;
             height: 30/@rem;
@@ -139,9 +146,10 @@
             }
         }
         .cart-content{
-            max-height: 200/@rem;
-            overflow: auto;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
             width: 100%;
+            max-height: 200/@rem;
             background-color: #fff;
             .dish-list{
                 color: #333;
