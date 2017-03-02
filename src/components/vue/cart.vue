@@ -15,148 +15,41 @@
             </i>
             <div class="price-box">
                 <p class="total"> ￥{{totalPrice}}</p>
-                <p class="delivery">另需配送费￥{{shop.minFee}}</p>
+                <p class="delivery">另需配送费￥{{shop.deliveryFee}}</p>
             </div>
             <div class="btn-submit" @click="goAccount">去结算</div>
         </div>
         <!--购物车盒子-->
-        <transition name="fold">
-            <div class="shopcart-container" v-show="cartShow">
-                <div class="cart-head">
-                    <span class="titile">购物车</span>
-                    <span class="clear-icon"></span>
-                    <span class="clear-btn">清空购物车</span>
+        <transition name="flag">
+            <div class="cart-panel-detail"   v-show="cartShow">
+                <div class="shopcart-container">
+                    <div class="cart-head" >
+                        <span class="titile">购物车</span>
+                        <span class="clear-icon"></span>
+                        <span class="clear-btn" @click="clearCart">清空购物车</span>
+                    </div>
+                    <ul class="cart-content" ref="listContent">
+                        <li class="dish-list" v-for="item in selectFoods">
+                            <p class="name">{{item.name}}</p>
+                            <p class="price">￥{{ item.discountPrice}}</p>
+                            <cartControl :food="item"></cartControl>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="listContent" ref="listContent">
-                    <li class="dish-list">
-                        <p class="name">{{selectFoods.name}}</p>
-                    </li>
-                </ul>
+                <div class="dialog" v-show="showDialog">
+                    <div class="content">确定要清空购物车吗？</div>
+                    <div class="btn">
+                        <a href="#" class="cancel">取消</a>
+                        <a href="#" class="confirm" id="confirm">确定</a>
+                    </div>
+                </div>
             </div>
-        </transition>
-        <!--遮罩层-->
-        <transition name="fade">
-            <div class="list-mask" @click="hideList" v-show="cartShow"></div>
         </transition>
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
-    @import "../less/common.less";
-    .common-footer{
-        position: fixed;
-        display: inline-block;
-        overflow: visible;
-        zoom: 1;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1001;
-        height: 50/@rem;
-        background-color: #000;
-        opacity: .7;
-        .webkit-box;
-        .center-box;
-    }
-    .common-cart{
-        background-size: 50/@rem auto;
-        width: 50/@rem;
-        height: 50/@rem;
-    }
-    .cartfooter{
-        .common-footer;
-        .container{
-            position: relative;
-            width: 100%;
-            .cart{
-                .common-cart;
-                position: absolute;
-                left: 10/@rem;
-                top: -24/@rem;
-                background: url("./../../assets/cart.png") no-repeat;
-            }
-            p{
-                display: inline-block;
-                color: #999;
-                font-size: 14/@rem;
-            }
-            .min-del{
-                margin-left: 70/@rem;
-            }
-            .min-fee{
-                -webkit-tap-highlight-color: rgba(0,0,0,0);
-                position: absolute;
-                right: 20/@rem;
-                font-weight: bolder;
-                font-size: 16/@rem;
-            }
-        }
-    }
-    .new-cart{
-        .common-footer;
-        .box{
-            .cart-icon{
-                .common-cart;
-                position: absolute;
-                left: 10/@rem;
-                top: -10/@rem;
-                background: url("./../../assets/colorcart.png") no-repeat;
-                .num{
-                    position: absolute;
-                    right: -10/@rem;
-                    top: -10/@rem;
-                    width: 30/@rem;
-                    height: 30/@rem;
-                    border-radius: 50%;
-                    background-color: #fb4e44;
-                    color: #fff;
-                    text-align: center;
-                    font-size: 18/@rem;
-                    line-height: 30/@rem;
-                    padding: 1/@rem;
-                    -webkit-transform: scale(.5);
-                    font-style: normal;
-                }
-            }
-            .price-box{
-                width: 100%;
-                padding: 8/@rem 0 8/@rem 70/@rem;
-                display: inline-block;
-                .total{
-                    color: #fff;
-                    font-size: 24/@rem;
-                    font-weight: bolder;
-                    line-height: 26/@rem;
-                }
-                .delivery{
-                    color: #999;
-                    font-size: 12/@rem;
-                    line-height: 12/@rem;
-                    padding-left: 4/@rem;
-                }
-            }
-            .btn-submit{
-                position: absolute;
-                color: #000;
-                top: 0;
-                right: 0;
-                width: 110/@rem;
-                height: 50/@rem;
-                text-align: center;
-                font-size: 16/@rem;
-                font-weight: bolder;
-                -webkit-tap-highlight-color: rgba(0,0,0,0);
-                background: #ffd161;
-                line-height: 50/@rem;
-            }
-        }
-    }
-    .shopcart-container{
-        position: fixed;
-        bottom: 50/@rem;
-        width: 100%;
-        background-color: red;
-    }
-
+    @import "../less/common";
+    @import "../less/shopcart";
 </style>
 <script>
     import '../../lib/flexible';
@@ -170,16 +63,20 @@
             },
             shop:{
                 type: Object
-            },
-            fold: true
+            }
         },
         data(){
-            return{}
+            return{
+                dish : {},
+                flag: true,
+                showDialog: false
+            }
         },
         computed: {
             totalPrice() {
                 let total = 0;
                 this.selectFoods.forEach((item) => {
+                    this.dish = item;
                     if(item.count && item.discountPrice){
                         total += item.discountPrice * item.count;
                     }
@@ -197,10 +94,10 @@
             },
             cartShow() {
                 if (!this.totalCount) {
-                    this.fold = true;
+                    this.flag = true;
                     return false;
                 }
-                let show = !this.fold;
+                let show = !this.flag;
                 if (show) {
                     this.$nextTick(() => {
                         if (!this.scroll) {
@@ -217,20 +114,38 @@
         },
         methods: {
             goAccount(){
-                window.alert(`支付${this.totalPrice}元`);
+                window.alert(`支付${this.totalPrice + this.shop.deliveryFee}元`);
             },
             toggleList() {
                 if (!this.totalCount) {
-                    return;
+                    return false;
                 }
-                this.fold = !this.fold;
+                this.flag = !this.flag;
             },
             hideList() {
-                this.fold = true;
+                this.flag = true;
+            },
+            clearCart() {
+                var self = this;
+                self.showDialog = true;
+                var confirmBtn = document.getElementById('confirm');
+                var cancelBtn  = document.getElementsByClassName('cancel')[0];
+                if(self.showDialog){
+                    confirmBtn.addEventListener('click',function () {
+                        self.selectFoods.forEach((item) => {
+                            item.count = 0;
+                            self.showDialog = false;//防止点击购物车icon直接出现对话框
+                            self.flag = true;//防止清空购物车后再次点击加入购物车出现购物车弹出
+                        });
+                    });
+                    cancelBtn.addEventListener('click', function () {
+                        self.showDialog = false;
+                    })
+                }
             }
         },
         components:{
-            cartcontrol: cartcontrol
+            cartControl: cartcontrol
         }
     }
 </script>

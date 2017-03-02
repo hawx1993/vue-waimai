@@ -22,10 +22,15 @@ $ npm run dev
 npm run build
 ```
 
+>效果
+
+![](./src/assets/WechatIMG58.jpeg)![](./src/assets/WechatIMG59.jpeg)
+![](./src/assets/WechatIMG60.jpeg)
+
+
 ### TODO
 
 - 首页
 - 登陆页
 - 订单页
 - 评价页下拉刷新
-- 商品页购买功能
