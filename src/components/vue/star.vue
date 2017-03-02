@@ -43,7 +43,7 @@
     .star{
         display: inline-block;
         .star-item{
-            background-image: url("http://www.dpfile.com/mod/app-m-waimai-mainchannelnew/1.1.15/css/img/evaluatestars.png");
+            background-image: url(./../../assets/evaluatestars.png);
             width: 12/@rem;
             height: 12/@rem;
             float: left;
