@@ -2,6 +2,14 @@
 
 > A Vue.js project
 
+The vue project is just for fun and learning,there are still have some compatibility bug on ios device.
+
+Still underConstruction.
+
+DEMO: [https://hawx1993.github.io/vue-waimai](https://hawx1993.github.io/vue-waimai)
+
+use chrome mobile device mode
+
 ## Build Setup
 
 
@@ -24,9 +32,19 @@ npm run build
 
 >效果
 
-![](./src/assets/WechatIMG58.jpeg)![](./src/assets/WechatIMG59.jpeg)
+![](./src/assets/WechatIMG58.jpeg)
+
+<br />
+
+![](./src/assets/WechatIMG59.jpeg)
+
+<br />
+
 ![](./src/assets/WechatIMG60.jpeg)
 
+>scan it on mobile device
+
+![](./src/assets/qrcode.jpeg)
 
 ### TODO
 
