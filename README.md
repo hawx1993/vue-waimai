@@ -1,5 +1,9 @@
 # 基于vue2+vue-router+webpack+less+es6仿美团外卖项目
 
+>脚手架
+
+脚手架基于[hbuild](https://github.com/hawx1993/hbuild) 进行构建
+
 > A Vue.js project
 
 The vue project is just for fun and learning,there are still have some compatibility bug on ios device.
@@ -46,9 +50,3 @@ npm run build
 
 ![](./src/assets/qrcode.jpeg)
 
-### TODO
-
-- 首页
-- 登陆页
-- 订单页
-- 评价页下拉刷新

@@ -48,11 +48,9 @@
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
-    @import "../less/common";
     @import "../less/shopcart";
 </style>
 <script>
-    import '../../lib/flexible';
     import cartcontrol from 'components/vue/cartcontrol'
     import BScroll from 'better-scroll';
 
@@ -126,10 +124,10 @@
                 this.flag = true;
             },
             clearCart() {
-                var self = this;
+                let self = this;
                 self.showDialog = true;
-                var confirmBtn = document.getElementById('confirm');
-                var cancelBtn  = document.getElementsByClassName('cancel')[0];
+                let confirmBtn = document.getElementById('confirm');
+                let cancelBtn  = document.getElementsByClassName('cancel')[0];
                 if(self.showDialog){
                     confirmBtn.addEventListener('click',function () {
                         self.selectFoods.forEach((item) => {

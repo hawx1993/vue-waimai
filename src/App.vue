@@ -1,6 +1,6 @@
 <style lang="less" rel="stylesheet/less" scoped>
     @import "./components/less/common.less";
-    #app {
+    #app{
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -65,8 +65,6 @@
 <script type="text/ecmascript-6">
     import header from 'components/vue/header'
     import axios from 'axios'
-    import flexible from './lib/flexible'
-
     export default {
         name: 'app',
         data(){
@@ -75,8 +73,8 @@
             }
         },
         created(){
-            axios.get('static/goodsData.json').then((res)=>{
-                var shopData = res.data.data;
+            axios.get('mock/goodsData.json').then((res)=>{
+                let shopData = res.data.data;
                 this.shop = shopData.shopInfo;
             })
         },

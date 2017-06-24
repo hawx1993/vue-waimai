@@ -61,14 +61,11 @@
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
-    @import "../less/common.less";
     @import "../less/estimate.less";
 </style>
 <script>
     import star from './star';
-    import '../../lib/flexible';
     import axios from 'axios';
-
     export default{
         data(){
             return{
@@ -78,7 +75,7 @@
             }
         },
         created(){
-            axios.get('static/shopComment.json').then((res)=>{
+            axios.get('mock/shopComment.json').then((res)=>{
                 this.cmt = res.data.data;
                 this.list = res.data.data.list;
             })

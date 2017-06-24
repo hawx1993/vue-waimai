@@ -5,7 +5,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-    import '../../lib/flexible';
     const LENGTH = 5;
     const CLS_ON = 'on';
     const CLS_HALF = 'half';

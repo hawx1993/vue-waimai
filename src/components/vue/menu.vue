@@ -42,17 +42,14 @@
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
-    @import "../less/common.less";
     @import "../less/menu.less";
 </style>
 <script>
-    import '../../lib/flexible';
     import header from 'components/vue/header'
     import axios from 'axios'
     import cart from 'components/vue/cart'
     import cartcontrol from 'components/vue/cartcontrol'
     import BScroll from 'better-scroll';
-
     export default{
         data(){
             return {
@@ -79,7 +76,7 @@
                     foods = [];
                 let dishList = self.dishCategory;
                 dishList.forEach((item)=>{
-                    var foodItem = item.dishList;
+                    let foodItem = item.dishList;
                     foodItem.forEach((food)=>{
                         if(food.count){
                             foods.push(food);
@@ -90,8 +87,8 @@
             }
         },
         created(){
-            var self = this;
-            axios.get('static/goodsData.json').then((res)=>{
+            let self = this;
+            axios.get('mock/goodsData.json').then((res)=>{
                 let shopData = res.data.data;
                 self.shop = shopData.shopInfo;
                 self.dishCategory = shopData.dishCategory;

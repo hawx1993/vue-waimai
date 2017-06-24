@@ -38,12 +38,10 @@
     </div>
 </template>
 <style lang="less" rel="stylesheet/less" scoped>
-    @import "./../less/common";
     @import "./../less/merchants";
 </style>
 <script>
     import axios from 'axios'
-    import flexible from './../../lib/flexible'
     import star from './star';
 
     export default{
@@ -53,7 +51,7 @@
             }
         },
         created(){
-            axios.get('static/shopInfo.json').then((res)=>{
+            axios.get('mock/shopInfo.json').then((res)=>{
                 this.shopInfo = res.data.data;
             })
         },

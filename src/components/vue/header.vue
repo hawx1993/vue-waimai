@@ -14,7 +14,6 @@
     </div>
 </template>
 <style lang="less" rel="stylesheet/less">
-    @import "../less/common";
     @import "../less/header";
 </style>
 <script>
