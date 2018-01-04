@@ -6,9 +6,7 @@
 
 脚手架基于[hbuild](https://github.com/hawx1993/hbuild) 进行构建
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/gWs9P5H4YpntyAR6x1qG5EkX/hawx1993/vue-waimai'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/gWs9P5H4YpntyAR6x1qG5EkX/hawx1993/vue-waimai.svg' />
-</a>
+
 
 > A Vue.js project
 
